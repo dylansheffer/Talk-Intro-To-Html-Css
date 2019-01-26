@@ -3,23 +3,13 @@
   <head>
     <title>Intro To HTML and CSS</title>
     <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    </style>
+    <!-- <link rel="stylesheet" href="styles/monobloc.css"> -->
+    <link rel="stylesheet" href="styles/apron.css">
   </head>
   <body>
     <textarea id="source">
 
-class: center, middle
+class: title
 
 # Intro to HTML and CSS
 
@@ -29,47 +19,79 @@ class: center, middle
 ## Overview
 
 1. Talk about how different people use the web
+2. Anatomy of a web page
 2. Essential HTML concepts
 3. Essential CSS concepts
 4. Customize an existing site
 
 ---
 
-class: center, middle
+class: title
 
 ## How different people use the web
 
 ---
 
-class: center, middle
+### Keyboard Only
 
-### Keyboards
+*All actions must be accessible via the keyboard*
 
 ---
 
-class: center, middle
-
 ### Zoomed In
+
+*Our sites must be able to respond to different text sizes and do not actively prohibit zooming in*
 
 ---
 
 ### Screen readers
 
-<img style="width: 90%;" src="https://westonthayer.com/writing/how-to-use-voiceover/voiceover-rotor.gif" alt="voice over demo">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5R-6WvAihms?start=378" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+*We must use correct HTML tags, so assistive technology can correctly interpret our pages.*
 
 ---
 
-class: center, middle
+class: title
+
+## Anatomy of a website
+
+---
+
+### HTML
+
+Provides the page's content and lays the foundation for layout by grouping things together.
+
+*The page's skelecton*
+
+---
+
+### CSS
+
+Styles the pages and tells the layout how to behave
+
+*The page's skin and clothes*
+
+---
+
+### Javascript
+
+Makes the page's dynamic and interactable
+
+*The page's brain*
+
+---
+
+class: title
 
 ## Essential HTML Concepts
 
 ---
 
+class: col-2
+
 ### HTML Tags
 
-```html
-<p></p>
-```
 
 - The tag name is wrapped between ankle brackets (<>)
 - There's a beginning (<>) and an ending tag (</>)
@@ -80,6 +102,8 @@ class: center, middle
 ```
 
 ---
+
+class: col-2, compact
 
 ### Structure of an HTML Document
 
@@ -101,88 +125,109 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: title
 
 ### Inline vs Block Elements
 
 ---
 
-class: middle
+class: col-2, compact
 
-#### Block Elements
+### Block Elements
 
 Creates a new line on its container.
 
 *It blocks others from sitting next to it.*
 
+<br>
+
 ```html
-<h1>Heading 1</h1>
+<h4>Heading 1</h4>
 <p>Paragraph</p>
 ```
-<h1>Heading 1</h1>
+<h4>Heading 1</h4>
 <p>Paragraph</p>
 
 ---
 
-class: middle
+class: col-2, compact
 
-#### Inline Elements
+### Inline Elements
 
 Does not create a new line.
 
 *It will sit inline with other elements.*
 
 ```html
-<p>Paragraph with an <span style="color: red;">Inline Element</span>.</p>
+<p>Text and an <span style="color: red;">Inline Element</span>.</p>
 ```
 <p>Paragraph with an <span style="color: red;">Inline Element</span>.</p>
 
-class: center, middle
 ---
-
+class: title
 
 ### IDs, Classes, Attributes!
 
-**IDs:** Are used to uniquely identify something on a page. Used for CSS and javascript selections and to link directly to a section of a page.
+---
+
+#### IDs
+
+Are used to uniquely identify something on a page. Used for CSS and javascript selections and to link directly to a section of a page.
 
 ```html
 <main id="main-content"></main>
 ```
 
-**Classes:** Are used to assign an element to a class name. Used for applying CSS Styles, and selecting elements in javascript.
+---
+
+class: col-2, compact
+
+#### Class
+
+Are used to assign an element to a class name. Used for applying CSS Styles, and selecting elements in javascript.
+
 *Note:* Many styles can be applied to a single HTML element.
 
 ```html
+<p>This text is normal</p>
 <p class="big-text">This text is big</p>
 <p class="big-text red-text">This text is big and red</p>
 ```
+<p>This text is normal</p>
+<p style="font-size: 2em;" class="big-text">This text is big</p>
+<p style="font-size: 2em; color: red" class="big-text red-text">This text is big and red</p>
 
-**Attributes:** Other things that are sometimes put into HTML tags. Used to give additional information to a tag.
-*Examples:* The source of an image on an image tag or the destination of a link.
+---
+
+#### Attributes
+
+Other things that are sometimes put into HTML tags. Used to give additional information to a tag.
+
+*Example:* The source of an image on an image tag or the destination of a link.
 
 ```html
 <img src="https://gph.to/2ReDxOs" alt="Squidward Dabbing">
 ```
 
-<img style="width: 10%;" src="https://gph.to/2ReDxOs" alt="Squidward Dabbing">
+<img style="height: 250px;" src="https://gph.to/2ReDxOs" alt="Squidward Dabbing">
 
 ---
 
 ### Tag purposes
 
 - Add content on a page like images, paragraphs, headings, etc.
-- Generic containers used to simply group content together (generally for positioning and layout).
-- Landmark elements which are tags that are used to annotate a document with keys on where to find certain types of information like the main content, different sections, or the navigation.
+- Group content together (generally for positioning and layout).
+- Annotate a document with keys on where to find certain types of information.
 
 ---
 
-class: center, middle
+class: title
 
 ## Essential HTML Tags
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Paragraph
 
@@ -199,8 +244,6 @@ class: middle
 <p>This is also a paragraph</p>
 
 ---
-
-class: middle
 
 ### Div
 
@@ -238,7 +281,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Headings (h1 - h6)
 
@@ -251,12 +294,12 @@ class: middle
 **Note:** Don't skip heading tags (h1 to h3). It destroys the page hierarchy used by screen readers and search engine bots.
 
 ```html
-<h1>1️⃣</h1>
-<h2>2️⃣</h2>
+<h4>Heading Level 4️⃣</h4>
+<h5>Heading Level 5️⃣</h5>
 ```
 
-<h1>1️⃣</h1>
-<h2>2️⃣</h2>
+<h4>Heading Level 4️⃣</h4>
+<h5>Heading Level 5️⃣</h5>
 
 ---
 
@@ -278,7 +321,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Unordered List
 
@@ -287,6 +330,8 @@ class: middle
   - Creates a bulleted list
   - Block element
 
+<br>
+
 ```html
 <ul>
   <li>Who cares about the order? 🤔</li>
@@ -300,7 +345,7 @@ class: middle
 </ul>
 
 ---
-class: middle
+class: col-2, compact
 
 ### Ordered List
 
@@ -309,6 +354,8 @@ class: middle
   - Creates a bulleted list
   - Block element
 
+
+  <br>
 ```html
 <ol>
   <li>Who cares about the order? 🤔</li>
@@ -323,7 +370,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### List Item
 
@@ -331,6 +378,9 @@ class: middle
 
   - What you put between of ul and ol tags
   - Block element
+
+<br>
+<br>
 
 ```html
 <ul>
@@ -348,7 +398,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Image
 
@@ -359,17 +409,17 @@ class: middle
     2. the `alt` tag which is used to tell assistive technology what is in the image
   - Inline element
 
-**Note:** You don't need to add text in the alt tag if the image is purely for decoration.
+**Note:** You don't need a closing `img` tag.
 
 ```html
 <img src="https://gph.to/2RRE8e4" alt="Cute dog typing on a keyboard">
 ```
 
-<img style="width: 25%;" src="https://gph.to/2RRE8e4" alt="Cute dog typing on a keyboard">
+<img  src="https://gph.to/2RRE8e4" alt="Cute dog typing on a keyboard">
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Main
 
@@ -378,6 +428,8 @@ class: middle
   - HTML landmark element for defining the main content on a page.
   - Block element
 
+**Note:** Landmark elements are essentially `<div>` tags that have meaning attached to them.
+
 ```html
 <main>
   <h1>Page Title</h1>
@@ -392,7 +444,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Navigation
 
@@ -418,7 +470,7 @@ class: middle
 
 ---
 
-class: middle
+class: col-2, compact
 
 ### Section
 
@@ -442,26 +494,22 @@ class: middle
 
 ---
 
-class: middle
-
 ### Footer
-
 #### `<footer>`
 
   - HTML landmark element that defines what the footer of the page is.
   - Block element
 
-**Note:** Landmark elements are essentially `<div>` tags that have meaning attached to them.
-
 ```html
 <footer>&copy; 2019 Dylan Sheffer</footer>
 ```
-
-<footer>&copy; 2019 Dylan Sheffer</footer>
+<div>
+  <footer>&copy; 2019 Dylan Sheffer</footer>
+</div>
 
 ---
 
-class: middle, center
+class: title
 
 ## Essential CSS Concepts
 
@@ -490,6 +538,13 @@ div {
 
 Selectors can be simple to very complicated.
 
+---
+
+class: col-2, compact
+
+
+#### Tag Selector
+
 The most simple type of selection is just a tag selector. This is where you just give it a tag name.
 
 ```css
@@ -497,8 +552,12 @@ h1 {
   color: red;
 }
 ```
+---
 
-You can also select by class or id which you define in the HTML.
+class: col-2, compact
+
+
+#### Class Selector
 
 Classes selected by using a `.` followed by the class' name.
 
@@ -507,6 +566,13 @@ Classes selected by using a `.` followed by the class' name.
   text-decoration: underline;
 }
 ```
+
+---
+
+class: col-2, compact
+
+
+#### ID Selector
 
 IDs are selected by using a `#` followed by the ID's name.
 
@@ -517,8 +583,9 @@ IDs are selected by using a `#` followed by the ID's name.
 ```
 
 ---
+class: col-2, compact
 
-### Selectors (cont.)
+#### Selecting Multiple Things
 
 You may also use more than one selector that are separated by commas to apply the same style to multiple things.
 
@@ -528,7 +595,15 @@ h1, h2 {
 }
 ```
 
-Finally you can target specific relationships using CSS selectors by first giving the selector the outer element followed by the inner element.
+---
+class: col-2, compact
+
+#### More Targeted Selecting
+
+You can target specific relationships using CSS selectors by first giving the selector the outer element followed by the inner element.
+
+<br>
+<br>
 
 ```css
 ul li {
@@ -536,7 +611,18 @@ ul li {
 }
 ```
 
+```html
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+```
+
 ---
+
+class: col-2, compact
+
 
 ### The Cascade
 
@@ -544,15 +630,17 @@ CSS stands for cascading style sheets.
 
 The cascade part is the concept that the later selectors in the document are the styles applied to the HTML elements.
 
+<br>
+<br>
+
 ```css
 p {
-  color: #BADA55
+  color: pink;
 }
 
 /* ... other code */
 
 p {
-  /* This style is applied instead of the original color */
   color: goldenrod;
 }
 ```
@@ -560,6 +648,8 @@ p {
 <p style="color: goldenrod">Text is goldenrod because it came last!</p>
 
 ---
+
+class: col-2, compact
 
 ### Specificity
 
@@ -574,6 +664,7 @@ Specificity means the more specific the selector is selected over a less specifi
 3. IDs
 
 ---
+class: col-2, compact
 
 ### Specificity (cont.)
 
@@ -593,6 +684,9 @@ Each type of selector in the CSS declaration adds a certain amount of points to 
 - [Mozilla Developer Network - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ---
+
+class: compact
+
 
 # Project Instructions
 
@@ -615,7 +709,7 @@ This basic site template can also be used to showcase your projects at the end o
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({ ratio: "16:9" });
     </script>
   </body>
 </html>
