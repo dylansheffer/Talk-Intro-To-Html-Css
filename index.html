@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro To HTML and CSS</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Intro to HTML and CSS
+
+---
+
+
+## Overview
+
+1. Talk about how different people use the web
+2. Essential HTML concepts
+3. Essential CSS concepts
+4. Customize an existing site
+
+---
+
+class: center, middle
+
+## How different people use the web
+
+---
+
+class: center, middle
+
+### Keyboards
+
+---
+
+class: center, middle
+
+### Zoomed In
+
+---
+
+### Screen readers
+
+<img style="width: 90%;" src="https://westonthayer.com/writing/how-to-use-voiceover/voiceover-rotor.gif" alt="voice over demo">
+
+---
+
+class: center, middle
+
+## Essential HTML Concepts
+
+---
+
+### HTML Tags
+
+```html
+<p></p>
+```
+
+- The tag name is wrapped between ankle brackets (<>)
+- There's a beginning (<>) and an ending tag (</>)
+- You generally put your stuff between the tags
+
+```html
+<p>💪💪💪</p>
+```
+
+---
+
+### Structure of an HTML Document
+
+- `<html>` tag wraps the document
+- `<head>` contains information about the page
+  - The title of the page, associated documents, etc
+- `<body>` contains the page's content
+
+```html
+<html>
+  <head>
+    <title>HTML Document Demo</title>
+  </head>
+  <body>
+    <h1>Hello Everybody 👋</h1>
+  </body>
+</html>
+```
+
+---
+
+class: center, middle
+
+### Inline vs Block Elements
+
+---
+
+class: middle
+
+#### Block Elements
+
+Creates a new line on its container.
+
+*It blocks others from sitting next to it.*
+
+```html
+<h1>Heading 1</h1>
+<p>Paragraph</p>
+```
+<h1>Heading 1</h1>
+<p>Paragraph</p>
+
+---
+
+class: middle
+
+#### Inline Elements
+
+Does not create a new line.
+
+*It will sit inline with other elements.*
+
+```html
+<p>Paragraph with an <span style="color: red;">Inline Element</span>.</p>
+```
+<p>Paragraph with an <span style="color: red;">Inline Element</span>.</p>
+
+class: center, middle
+---
+
+
+### IDs, Classes, Attributes!
+
+**IDs:** Are used to uniquely identify something on a page. Used for CSS and javascript selections and to link directly to a section of a page.
+
+```html
+<main id="main-content"></main>
+```
+
+**Classes:** Are used to assign an element to a class name. Used for applying CSS Styles, and selecting elements in javascript.
+*Note:* Many styles can be applied to a single HTML element.
+
+```html
+<p class="big-text">This text is big</p>
+<p class="big-text red-text">This text is big and red</p>
+```
+
+**Attributes:** Other things that are sometimes put into HTML tags. Used to give additional information to a tag.
+*Examples:* The source of an image on an image tag or the destination of a link.
+
+```html
+<img src="https://gph.to/2ReDxOs" alt="Squidward Dabbing">
+```
+
+<img style="width: 10%;" src="https://gph.to/2ReDxOs" alt="Squidward Dabbing">
+
+---
+
+### Tag purposes
+
+- Add content on a page like images, paragraphs, headings, etc.
+- Generic containers used to simply group content together (generally for positioning and layout).
+- Landmark elements which are tags that are used to annotate a document with keys on where to find certain types of information like the main content, different sections, or the navigation.
+
+---
+
+class: center, middle
+
+## Essential HTML Tags
+
+---
+
+class: middle
+
+### Paragraph
+
+#### `<p>`
+
+  - Defines a paragraph.
+  - Block element
+
+```html
+<p>This is a paragraph</p>
+<p>This is also a paragraph</p>
+```
+<p>This is a paragraph</p>
+<p>This is also a paragraph</p>
+
+---
+
+class: middle
+
+### Div
+
+#### `<div>`
+
+  - Generic container for other HTML elements
+  - Used for grouping like tags together
+  - Block element
+
+```html
+<div style="background: red; color: white">Group 1</div>
+<div style="background: blue; color: white">Group 2</div>
+```
+
+<div style="background: red; color: white">Group 1</div>
+<div style="background: blue; color: white">Group 2</div>
+
+---
+
+class: middle
+
+### Span
+
+#### `<span>`
+
+  - Generic inline container for phrasing content.
+  - It is typically used to group elements for styling purposes.
+  - Inline element
+
+```html
+<p>Sentence with <span style="color: brown;">text wrapped in a span</span></p>
+```
+
+<p>Sentence with <span style="color: brown;">text wrapped in a span</span></p>
+
+---
+
+class: middle
+
+### Headings (h1 - h6)
+
+#### `<h1>`
+
+  - Different page headings
+  - Used to create a hierarchy of information
+  - Block element
+
+**Note:** Don't skip heading tags (h1 to h3). It destroys the page hierarchy used by screen readers and search engine bots.
+
+```html
+<h1>1️⃣</h1>
+<h2>2️⃣</h2>
+```
+
+<h1>1️⃣</h1>
+<h2>2️⃣</h2>
+
+---
+
+class: middle
+
+### Anchor
+
+#### `<a>`
+
+  - A bad name for a link.
+  - Used to link other pages or other elements on the page.
+  - Inline element
+
+```html
+<p>You won't <a href="https://goo.gl/k7hB7D">Click Here 😜</a></p>
+```
+
+<p>You won't <a href="https://goo.gl/k7hB7D">Click Here 😜</a></p>
+
+---
+
+class: middle
+
+### Unordered List
+
+#### `<ul>`
+
+  - Creates a bulleted list
+  - Block element
+
+```html
+<ul>
+  <li>Who cares about the order? 🤔</li>
+  <li>Not me 🤷‍♂️</li>
+</ul>
+```
+
+<ul>
+  <li>Who cares about the order? 🤔</li>
+  <li>Not me 🤷‍♂️</li>
+</ul>
+
+---
+class: middle
+
+### Ordered List
+
+#### `<ol>`
+
+  - Creates a bulleted list
+  - Block element
+
+```html
+<ol>
+  <li>Who cares about the order? 🤔</li>
+  <li>ME! 🙋‍♀️</li>
+</ol>
+```
+
+<ol>
+  <li>Who cares about the order? 🤔</li>
+  <li>ME! 🙋‍♀️</li>
+</ol>
+
+---
+
+class: middle
+
+### List Item
+
+#### `<li>`
+
+  - What you put between of ul and ol tags
+  - Block element
+
+```html
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+```
+
+<ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+  </ul>
+
+---
+
+class: middle
+
+### Image
+
+#### `<img>`
+
+  - Requires 2 attributes:
+    1. the `src` which defines where the image is located
+    2. the `alt` tag which is used to tell assistive technology what is in the image
+  - Inline element
+
+**Note:** You don't need to add text in the alt tag if the image is purely for decoration.
+
+```html
+<img src="https://gph.to/2RRE8e4" alt="Cute dog typing on a keyboard">
+```
+
+<img style="width: 25%;" src="https://gph.to/2RRE8e4" alt="Cute dog typing on a keyboard">
+
+---
+
+class: middle
+
+### Main
+
+#### `<main>`
+
+  - HTML landmark element for defining the main content on a page.
+  - Block element
+
+```html
+<main>
+  <h1>Page Title</h1>
+  <p>Blah blah blah 💁‍♂️</p>
+</main>
+```
+
+<main>
+  <h1>Page Title</h1>
+  <p>Blah blah blah 💁‍♂️</p>
+</main>
+
+---
+
+class: middle
+
+### Navigation
+
+#### `<nav>`
+
+  - HTML landmark element for defining where the page's navigation is
+  - Block element
+
+```html
+<nav>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+```
+<nav>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+
+---
+
+class: middle
+
+### Section
+
+#### `<section>`
+
+  - HTML landmark element that defines a new section of a page's content.
+  - Generally has it's own heading within the section tags
+  - Block element
+
+```html
+<section>
+  <h1>Section 1</h1>
+  <p>Some text to prove my point...</p>
+</section>
+```
+
+<section>
+  <h1>Section 1</h1>
+  <p>Some text to prove my point...</p>
+</section>
+
+---
+
+class: middle
+
+### Footer
+
+#### `<footer>`
+
+  - HTML landmark element that defines what the footer of the page is.
+  - Block element
+
+**Note:** Landmark elements are essentially `<div>` tags that have meaning attached to them.
+
+```html
+<footer>&copy; 2019 Dylan Sheffer</footer>
+```
+
+<footer>&copy; 2019 Dylan Sheffer</footer>
+
+---
+
+class: middle, center
+
+## Essential CSS Concepts
+
+
+---
+
+### Syntax
+
+CSS has 3 parts to its syntax (code grammar)
+
+1. The selector
+2. Curly braces
+3. CSS properties
+
+```css
+div {
+  font-size: 18px;
+}
+```
+
+**Note:** Each property ends with a semi-colon `;`
+
+---
+
+### Selectors
+
+Selectors can be simple to very complicated.
+
+The most simple type of selection is just a tag selector. This is where you just give it a tag name.
+
+```css
+h1 {
+  color: red;
+}
+```
+
+You can also select by class or id which you define in the HTML.
+
+Classes selected by using a `.` followed by the class' name.
+
+```css
+.active {
+  text-decoration: underline;
+}
+```
+
+IDs are selected by using a `#` followed by the ID's name.
+
+```css
+#maincontent {
+  background-color: white;
+}
+```
+
+---
+
+### Selectors (cont.)
+
+You may also use more than one selector that are separated by commas to apply the same style to multiple things.
+
+```css
+h1, h2 {
+  color: aqua;
+}
+```
+
+Finally you can target specific relationships using CSS selectors by first giving the selector the outer element followed by the inner element.
+
+```css
+ul li {
+  text-decoration: none;
+}
+```
+
+---
+
+### The Cascade
+
+CSS stands for cascading style sheets.
+
+The cascade part is the concept that the later selectors in the document are the styles applied to the HTML elements.
+
+```css
+p {
+  color: #BADA55
+}
+
+/* ... other code */
+
+p {
+  /* This style is applied instead of the original color */
+  color: goldenrod;
+}
+```
+
+<p style="color: goldenrod">Text is goldenrod because it came last!</p>
+
+---
+
+### Specificity
+
+The other rule for determining what style will be applied to an element is specificity.
+
+Specificity means the more specific the selector is selected over a less specific tag.
+
+#### Scale of specificity (low to high)
+
+1. General tags (main, p, body)
+2. Classes
+3. IDs
+
+---
+
+### Specificity (cont.)
+
+Each type of selector in the CSS declaration adds a certain amount of points to its specificity score.
+
+*General* gives 1 point, *Classes* give 10, *IDs* give 100.
+
+`main{}` is less specific than `.container{}`
+
+`.container{}` is less specific than `#maincontent{}`
+
+---
+
+## Resources
+
+- [Mozilla Developer Network - HTML Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [Mozilla Developer Network - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+---
+
+# Project Instructions
+
+## Goal
+
+Take the provided website template and customize it with your own content, images, colors, fonts, etc.
+
+This basic site template can also be used to showcase your projects at the end of the Hackathon!
+
+## Online Editor
+
+1. [Go to this link to find the demo project](https://thimbleprojects.org/dylansheffer/623177/)
+2. Click the `Remix` button to create your own copy in an online code editor
+3. You must create an account on Thimble to save your work
+
+**Note:** The source code for the template can be downloaded [here](https://github.com/dylansheffer/SPARK-Workshop/archive/master.zip)
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
